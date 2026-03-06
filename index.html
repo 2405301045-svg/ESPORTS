@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXUS ARENA — Esports Gaming Hub</title>
+    <meta name="description"
+        content="NEXUS ARENA — The ultimate esports gaming hub. Join the arena, watch live matches, and dominate the leaderboard." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- ========== PARTICLE CANVAS ========== -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- ========== GLOWING GRID OVERLAY ========== -->
+    <div class="grid-overlay"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="navbar" class="navbar antigravity-element" data-mass="2">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">NEXUS<span class="logo-accent">ARENA</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#games" class="nav-link">Games</a></li>
+                <li><a href="#leaderboard" class="nav-link">Leaderboard</a></li>
+                <li><a href="#tournaments" class="nav-link">Tournaments</a></li>
+                <li><a href="#live" class="nav-link">Live</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="antigravity-toggle" class="btn btn-outline btn-sm" title="Toggle Anti-Gravity">
+                    🌀 Anti-Gravity
+                </button>
+                <button class="btn btn-primary btn-sm">Sign In</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== MOBILE MENU ========== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#leaderboard">Leaderboard</a></li>
+            <li><a href="#tournaments">Tournaments</a></li>
+            <li><a href="#live">Live</a></li>
+        </ul>
+        <button class="btn btn-primary" style="width:100%;margin-top:1rem;">Sign In</button>
+    </div>
+
+    <!-- ========== HERO SECTION ========== -->
+    <header id="hero" class="hero-section">
+        <div class="hero-bg-effects">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge antigravity-element" data-mass="0.5">
+                <span class="badge-dot"></span> SEASON 12 — NOW LIVE
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line title-line-1 antigravity-element" data-mass="3">NEXUS</span>
+                <span class="title-line title-line-2 antigravity-element" data-mass="3.5">ARENA</span>
+            </h1>
+            <p class="hero-tagline antigravity-element" data-mass="1">Play Hard. <span class="tagline-accent">Dominate
+                    Harder.</span></p>
+            <div class="hero-cta antigravity-element" data-mass="1.5">
+                <button class="btn btn-primary btn-lg btn-glow" id="joinArenaBtn">
+                    <span class="btn-icon">🎮</span> Join Arena
+                </button>
+                <button class="btn btn-outline btn-lg" id="watchMatchesBtn">
+                    <span class="btn-icon">📺</span> Watch Matches
+                </button>
+            </div>
+            <div class="hero-stats antigravity-element" data-mass="1">
+                <div class="stat-item">
+                    <span class="stat-value" data-count="24500">0</span>
+                    <span class="stat-label">Active Players</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value" data-count="1280">0</span>
+                    <span class="stat-label">Live Matches</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value" data-count="850">0</span>
+                    <span class="stat-label">Tournaments</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator antigravity-element" data-mass="0.3">
+            <div class="scroll-line"></div>
+            <span>SCROLL</span>
+        </div>
+    </header>
+
+    <!-- ========== FEATURED GAMES ========== -->
+    <section id="games" class="section games-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">// FEATURED GAMES</span>
+                <h2 class="section-title">Choose Your <span class="text-gradient">Battleground</span></h2>
+                <p class="section-subtitle">Dominate in the world's biggest competitive titles</p>
+            </div>
+            <div class="games-grid">
+                <!-- Valorant -->
+                <div class="game-card antigravity-element scroll-reveal" data-mass="2" data-delay="0">
+                    <div class="game-card-bg" style="background: linear-gradient(135deg, #fd4556 0%, #1a1a2e 100%)">
+                    </div>
+                    <div class="game-card-content">
+                        <div class="game-card-icon">🎯</div>
+                        <h3 class="game-card-title">VALORANT</h3>
+                        <p class="game-card-genre">Tactical Shooter</p>
+                        <div class="game-card-stats">
+                            <span><strong>12.4K</strong> Playing</span>
+                            <span><strong>86</strong> Matches</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">Play Now</button>
+                    </div>
+                    <div class="game-card-glow" style="background: #fd4556"></div>
+                </div>
+                <!-- CS2 -->
+                <div class="game-card antigravity-element scroll-reveal" data-mass="2.2" data-delay="100">
+                    <div class="game-card-bg" style="background: linear-gradient(135deg, #f0b232 0%, #1a1a2e 100%)">
+                    </div>
+                    <div class="game-card-content">
+                        <div class="game-card-icon">💥</div>
+                        <h3 class="game-card-title">CS2</h3>
+                        <p class="game-card-genre">Tactical FPS</p>
+                        <div class="game-card-stats">
+                            <span><strong>18.7K</strong> Playing</span>
+                            <span><strong>142</strong> Matches</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">Play Now</button>
+                    </div>
+                    <div class="game-card-glow" style="background: #f0b232"></div>
+                </div>
+                <!-- Fortnite -->
+                <div class="game-card antigravity-element scroll-reveal" data-mass="1.8" data-delay="200">
+                    <div class="game-card-bg" style="background: linear-gradient(135deg, #00d4ff 0%, #1a1a2e 100%)">
+                    </div>
+                    <div class="game-card-content">
+                        <div class="game-card-icon">🏗️</div>
+                        <h3 class="game-card-title">FORTNITE</h3>
+                        <p class="game-card-genre">Battle Royale</p>
+                        <div class="game-card-stats">
+                            <span><strong>9.2K</strong> Playing</span>
+                            <span><strong>64</strong> Matches</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">Play Now</button>
+                    </div>
+                    <div class="game-card-glow" style="background: #00d4ff"></div>
+                </div>
+                <!-- Apex Legends -->
+                <div class="game-card antigravity-element scroll-reveal" data-mass="2.5" data-delay="300">
+                    <div class="game-card-bg" style="background: linear-gradient(135deg, #da292a 0%, #1a1a2e 100%)">
+                    </div>
+                    <div class="game-card-content">
+                        <div class="game-card-icon">🦅</div>
+                        <h3 class="game-card-title">APEX LEGENDS</h3>
+                        <p class="game-card-genre">Battle Royale FPS</p>
+                        <div class="game-card-stats">
+                            <span><strong>7.8K</strong> Playing</span>
+                            <span><strong>53</strong> Matches</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">Play Now</button>
+                    </div>
+                    <div class="game-card-glow" style="background: #da292a"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LEADERBOARD ========== -->
+    <section id="leaderboard" class="section leaderboard-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">// TOP PLAYERS</span>
+                <h2 class="section-title">Global <span class="text-gradient">Leaderboard</span></h2>
+                <p class="section-subtitle">The legends who dominate every arena</p>
+            </div>
+            <div class="leaderboard-grid">
+                <!-- Player 1 -->
+                <div class="player-card rank-1 antigravity-element scroll-reveal" data-mass="2" data-delay="0">
+                    <div class="player-rank">#1</div>
+                    <div class="player-avatar">👑</div>
+                    <div class="player-info">
+                        <h4 class="player-name">PhantomX</h4>
+                        <span class="player-team">Team Nexus</span>
+                    </div>
+                    <div class="player-stats-grid">
+                        <div class="player-stat">
+                            <span class="player-stat-value">2,847</span>
+                            <span class="player-stat-label">ELO</span>
+                        </div>
+                        <div class="player-stat">
+                            <span class="player-stat-value">94.2%</span>
+                            <span class="player-stat-label">Win Rate</span>
+                        </div>
+                        <div class="player-stat">
+                            <span class="player-stat-value">1,203</span>
+                            <span class="player-stat-label">Matches</span>
+                        </div>
+                    </div>
+                    <div class="player-card-glow"></div>
+                </div>
+                <!-- Player 2 -->
+                <div class="player-card rank-2 antigravity-element scroll-reveal" data-mass="1.8" data-delay="100">
+                    <div class="player-rank">#2</div>
+                    <div class="player-avatar">⚔️</div>
+                    <div class="player-info">
+                        <h4 class="player-name">VoidWalker</h4>
+                        <span class="player-team">Shadow Esports</span>
+                    </div>
+                    <div class="player-stats-grid">
+                        <div class="player-stat">
+                            <span class="player-stat-value">2,691</span>
+                            <span class="player-stat-label">ELO</span>
+                        </div>
+                        <div class="player-stat">
+                            <span class="player-stat-value">91.8%</span>
+                            <span class="player-stat-label">Win Rate</span>
+                        </div>
+                        <div class="player-stat">
+                            <span class="player-stat-value">987</span>
+                            <span class="player-stat-label">Matches</span>
+                        </div>
+                    </div>
+                    <div class="player-card-glow"></div>
+                </div>
+                <!-- Player 3 -->
+                <div class="player-card rank-3 antigravity-element scroll-reveal" data-mass="2.2" data-delay="200">
+                    <div class="player-rank">#3</div>
+                    <div class="player-avatar">🔥</div>
+                    <div class="player-info">
+                        <h4 class="player-name">NeonStrike</h4>
+                        <span class="player-team">Cyber Wolves</span>
+                    </div>
+                    <div class="player-stats-grid">
+                        <div class="player-stat">
+                            <span class="player-stat-value">2,544</span>
+                            <span class="player-stat-label">ELO</span>
+                        </div>
+                        <div class="player-stat">
+                            <span class="player-stat-value">89.5%</span>
+                            <span class="player-stat-label">Win Rate</span>
+                        </div>
+                        <div class="player-stat">
+                            <span class="player-stat-value">1,456</span>
+                            <span class="player-stat-label">Matches</span>
+                        </div>
+                    </div>
+                    <div class="player-card-glow"></div>
+                </div>
+                <!-- Player 4 -->
+                <div class="player-card antigravity-element scroll-reveal" data-mass="1.5" data-delay="300">
+                    <div class="player-rank">#4</div>
+                    <div class="player-avatar">💎</div>
+                    <div class="player-info">
+                        <h4 class="player-name">CrystalBlade</h4>
+                        <span class="player-team">Apex Dynasty</span>
+                    </div>
+                    <div class="player-stats-grid">
+                        <div class="player-stat">
+                            <span class="player-stat-value">2,398</span>
+                            <span class="player-stat-label">ELO</span>
+                        </div>
+                        <div class="player-stat">
+                            <span class="player-stat-value">87.1%</span>
+                            <span class="player-stat-label">Win Rate</span>
+                        </div>
+                        <div class="player-stat">
+                            <span class="player-stat-value">876</span>
+                            <span class="player-stat-label">Matches</span>
+                        </div>
+                    </div>
+                    <div class="player-card-glow"></div>
+                </div>
+                <!-- Player 5 -->
+                <div class="player-card antigravity-element scroll-reveal" data-mass="1.7" data-delay="400">
+                    <div class="player-rank">#5</div>
+                    <div class="player-avatar">🐉</div>
+                    <div class="player-info">
+                        <h4 class="player-name">DragonPulse</h4>
+                        <span class="player-team">Storm Riders</span>
+                    </div>
+                    <div class="player-stats-grid">
+                        <div class="player-stat">
+                            <span class="player-stat-value">2,301</span>
+                            <span class="player-stat-label">ELO</span>
+                        </div>
+                        <div class="player-stat">
+                            <span class="player-stat-value">85.6%</span>
+                            <span class="player-stat-label">Win Rate</span>
+                        </div>
+                        <div class="player-stat">
+                            <span class="player-stat-value">1,102</span>
+                            <span class="player-stat-label">Matches</span>
+                        </div>
+                    </div>
+                    <div class="player-card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TOURNAMENTS ========== -->
+    <section id="tournaments" class="section tournaments-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">// UPCOMING</span>
+                <h2 class="section-title">Next <span class="text-gradient">Tournaments</span></h2>
+                <p class="section-subtitle">Compete for glory and massive prize pools</p>
+            </div>
+            <div class="tournaments-grid">
+                <div class="tournament-card antigravity-element scroll-reveal" data-mass="2" data-delay="0">
+                    <div class="tournament-status live">LIVE NOW</div>
+                    <div class="tournament-icon">🏆</div>
+                    <h3 class="tournament-name">Nexus Champions League</h3>
+                    <p class="tournament-game">VALORANT</p>
+                    <div class="tournament-details">
+                        <div class="tournament-detail">
+                            <span class="detail-label">Prize Pool</span>
+                            <span class="detail-value">$250,000</span>
+                        </div>
+                        <div class="tournament-detail">
+                            <span class="detail-label">Teams</span>
+                            <span class="detail-value">32</span>
+                        </div>
+                        <div class="tournament-detail">
+                            <span class="detail-label">Format</span>
+                            <span class="detail-value">Double Elim</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm">Watch Live</button>
+                </div>
+                <div class="tournament-card antigravity-element scroll-reveal" data-mass="1.8" data-delay="100">
+                    <div class="tournament-status upcoming">MAR 15</div>
+                    <div class="tournament-icon">⚡</div>
+                    <h3 class="tournament-name">CS2 World Invitational</h3>
+                    <p class="tournament-game">CS2</p>
+                    <div class="tournament-details">
+                        <div class="tournament-detail">
+                            <span class="detail-label">Prize Pool</span>
+                            <span class="detail-value">$500,000</span>
+                        </div>
+                        <div class="tournament-detail">
+                            <span class="detail-label">Teams</span>
+                            <span class="detail-value">24</span>
+                        </div>
+                        <div class="tournament-detail">
+                            <span class="detail-label">Format</span>
+                            <span class="detail-value">Swiss</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-sm">Register</button>
+                </div>
+                <div class="tournament-card antigravity-element scroll-reveal" data-mass="2.2" data-delay="200">
+                    <div class="tournament-status upcoming">MAR 22</div>
+                    <div class="tournament-icon">🔥</div>
+                    <h3 class="tournament-name">Apex Arena Showdown</h3>
+                    <p class="tournament-game">APEX LEGENDS</p>
+                    <div class="tournament-details">
+                        <div class="tournament-detail">
+                            <span class="detail-label">Prize Pool</span>
+                            <span class="detail-value">$150,000</span>
+                        </div>
+                        <div class="tournament-detail">
+                            <span class="detail-label">Teams</span>
+                            <span class="detail-value">20</span>
+                        </div>
+                        <div class="tournament-detail">
+                            <span class="detail-label">Format</span>
+                            <span class="detail-value">Round Robin</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-sm">Register</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LIVE STREAMS ========== -->
+    <section id="live" class="section live-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">// LIVE NOW</span>
+                <h2 class="section-title">Watch <span class="text-gradient">Live Streams</span></h2>
+                <p class="section-subtitle">Catch the action as it happens</p>
+            </div>
+            <div class="live-grid">
+                <div class="live-card live-featured antigravity-element scroll-reveal" data-mass="3" data-delay="0">
+                    <div class="live-badge"><span class="live-dot"></span> LIVE</div>
+                    <div class="live-preview">
+                        <div class="live-preview-placeholder">
+                            <span class="live-play-btn">▶</span>
+                        </div>
+                    </div>
+                    <div class="live-info">
+                        <h3 class="live-title">Nexus Champions League — Grand Finals</h3>
+                        <p class="live-meta">Team Nexus vs Shadow Esports • VALORANT</p>
+                        <div class="live-viewers">
+                            <span class="viewers-dot"></span> 48.2K watching
+                        </div>
+                    </div>
+                </div>
+                <div class="live-sidebar">
+                    <div class="live-card-sm antigravity-element scroll-reveal" data-mass="1.5" data-delay="100">
+                        <div class="live-badge-sm"><span class="live-dot"></span> LIVE</div>
+                        <div class="live-preview-sm">
+                            <span class="live-play-btn-sm">▶</span>
+                        </div>
+                        <div class="live-info-sm">
+                            <h4>CS2 Pro League — Day 3</h4>
+                            <span>12.8K watching</span>
+                        </div>
+                    </div>
+                    <div class="live-card-sm antigravity-element scroll-reveal" data-mass="1.2" data-delay="200">
+                        <div class="live-badge-sm"><span class="live-dot"></span> LIVE</div>
+                        <div class="live-preview-sm">
+                            <span class="live-play-btn-sm">▶</span>
+                        </div>
+                        <div class="live-info-sm">
+                            <h4>Fortnite Cup Finals</h4>
+                            <span>8.4K watching</span>
+                        </div>
+                    </div>
+                    <div class="live-card-sm antigravity-element scroll-reveal" data-mass="1.8" data-delay="300">
+                        <div class="live-badge-sm"><span class="live-dot"></span> LIVE</div>
+                        <div class="live-preview-sm">
+                            <span class="live-play-btn-sm">▶</span>
+                        </div>
+                        <div class="live-info-sm">
+                            <h4>Apex Ranked Grind — Top 500</h4>
+                            <span>5.1K watching</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">NEXUS<span class="logo-accent">ARENA</span></span>
+                    </a>
+                    <p class="footer-description">The ultimate esports gaming hub. Compete, climb, and conquer.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon antigravity-element" data-mass="0.5" aria-label="Twitter">𝕏</a>
+                        <a href="#" class="social-icon antigravity-element" data-mass="0.5" aria-label="Discord">🎧</a>
+                        <a href="#" class="social-icon antigravity-element" data-mass="0.5" aria-label="YouTube">▶️</a>
+                        <a href="#" class="social-icon antigravity-element" data-mass="0.5" aria-label="Twitch">📡</a>
+                        <a href="#" class="social-icon antigravity-element" data-mass="0.5"
+                            aria-label="Instagram">📸</a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Tournaments</a></li>
+                        <li><a href="#">Leaderboard</a></li>
+                        <li><a href="#">Live Streams</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Discord Server</a></li>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Content Creators</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 NEXUS ARENA. All rights reserved.</span>
+                <span>Made with ⚡ for gamers</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
